@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>获取经纬度</title>
+    <script src="zepto.js"></script>
+</head>
+<body class="indexBody">
+    
+
+<script>
+$.get('map.php', function(response){
+  var data = eval('(' + response + ')');
+  console.log(data.name);
+})
+
+// $.ajax({
+//   type: 'get',
+//   url: 'map.php',
+//   dataType: 'json',
+//   data: {
+
+//   },
+//   success: function(responseText) {
+//     console.log(responseText);
+//   }
+// })
+
+// var xmlHttp
+
+// function showHint(){
+//   xmlHttp=GetXmlHttpObject()
+//   var url="map.php"
+//   xmlHttp.onreadystatechange=stateChanged 
+//   xmlHttp.open("GET",url,true)
+//   xmlHttp.send(null)
+// } 
+// showHint();
+
+// function stateChanged(){
+//   console.log(xmlHttp.responseText);
+// }
+
+// function GetXmlHttpObject()
+// {
+// var xmlHttp=null;
+// try{
+//   // Firefox, Opera 8.0+, Safari
+//   xmlHttp=new XMLHttpRequest();
+// }
+// catch (e){
+//   // Internet Explorer
+//   try{
+//     xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+//   }
+//   catch (e){
+//     xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+//   }
+// }
+// return xmlHttp;
+// }
+</script>
+</body>
+</html>
