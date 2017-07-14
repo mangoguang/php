@@ -10,10 +10,31 @@
     
 
 <script>
-$.get('map.php', function(response){
+$.get('setMapData.php', function(response){
   var data = eval('(' + response + ')');
   console.log(data.name);
+  alert(JSON.stringify(data.name));
 })
+
+// $.ajax({
+//   type: 'GET',
+//   url: '/projects',
+//   // data to be added to query string:
+//   data: { name: 'Zepto.js' },
+//   // type of data we are expecting in return:
+//   dataType: 'json',
+//   timeout: 300,
+//   context: $('body'),
+//   success: function(data){
+//     // Supposing this JSON payload was received:
+//     //   {"project": {"id": 42, "html": "<div>..." }}
+//     // append the HTML to context object.
+//     this.append(data.project.html)
+//   },
+//   error: function(xhr, type){
+//     alert('Ajax error!')
+//   }
+// })
 
 // $.ajax({
 //   type: 'get',
