@@ -1,4 +1,5 @@
 <?php
+printf('$row');
   $con = mysql_connect("localhost:3308","root","derucci123");
   if(!$con){
     die('Could not connect: ' . mysql_error());
@@ -9,7 +10,6 @@
 
   $result = mysql_query($sql) or die(mysql_error());
   $row = mysql_fetch_array($result);
-
   $person=array("id"=>$row[0],"name"=>$row[1],"address"=>$row[2]);
 
   $text = json_encode($person);

@@ -4,19 +4,15 @@
   <meta charset="utf-8">
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <title>获取经纬度</title>
-    <script src="zepto.js"></script>
+    <script src="./js/zepto.js"></script>
 </head>
 <body class="indexBody">
     <p class='name'></p>
 
 <script>
-$.post('setMapData.php', {
-  name: '李四',
-  phone: '18888888',
-  jingdu: 112,
-  weidu: 23,
-  id: 3,
-  address: '惠东县惠东中学'
+$.post('../port/login.php', {
+  name: 'mangoguang',
+  password: 123456
 },function(response){
   console.log(response);
   var data = eval('(' + response + ')');
