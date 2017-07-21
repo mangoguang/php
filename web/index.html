@@ -2,23 +2,17 @@
 <html>
 <head>
   <meta charset="utf-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
-    <title>获取经纬度</title>
-    <script src="./js/zepto.js"></script>
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+  <title>获取经纬度</title>
 </head>
 <body class="indexBody">
-    <p class='name'></p>
+  <form>
+    <label>用户名：</label><input class="name" type="text">
+    <label>密码：</label><input class="password" type="password">
+    <button type="button">登陆</button>
+  </form>
 
-<script>
-$.post('../port/login.php', {
-  name: 'mangoguang',
-  password: 123456
-},function(response){
-  console.log(response);
-  var data = eval('(' + response + ')');
-  console.log(data.name);
-  $('.name').text(data.name);
-})
-</script>
+  <script src="./js/zepto.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>
