@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <title>cros跨域处理</title>
+    <script src="../script/lib/zepto.js"></script>
+</head>
+<body>
+
+  <script>
+    $.ajax({
+      type: 'post',
+      url: 'http://10.11.8.237/php/port/loginCros.php',
+      dataType: 'json',
+      data: {
+        name: 'mango',
+        password: '123456'
+      },
+      success: function(data) {
+        if (data.status == 'success') {
+          console.log(data);
+          // location.href = './pages/home.html?name=' + name;
+        } else {
+          alert('账号或者密码错误！');
+        }
+      },
+      error: function(data) {
+        alert('您的网络有问题。');
+      },
+    })
+  </script>
+</body>
+</html>
