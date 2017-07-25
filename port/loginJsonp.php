@@ -1,7 +1,12 @@
 <?php
+header('Content-type: application/json');  
+//获取回调函数名  
+$jsoncallback = htmlspecialchars($_REQUEST ['jsoncallback']);//把预定义的字符转换为 HTML 实体。
+
 //定义变量
-$name=$_POST["name"];
-$password=$_POST["password"];
+$name=$_GET["name"];
+$password=$_GET["password"];
+
 //登陆数据库
 $con = mysql_connect("localhost:3308","root","derucci123");
 //连接失败时报错
@@ -19,5 +24,6 @@ if($name == $row[1]&&$password == $row[2]){
 }else{
   $data = array("name"=>$name,'status'=>'error');
 }
-print_r(json_encode($data));
+$json_data=json_encode($data);//转换为json数据 
+print_r($jsoncallback."(".$json_data.")");
 ?> 

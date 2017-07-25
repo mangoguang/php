@@ -18,7 +18,8 @@ function login() {
     },
     success: function(data) {
       if (data.status == 'success') {
-        location.href = './pages/home.html';
+        console.log(data);
+        // location.href = './pages/home.html?name=' + name;
       } else {
         alert('账号或者密码错误！');
       }
