@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>闭包</title>
+</head>
+<body class="resultBody">
+  <button class="test" type="button">点击</button>
+
+<script src="../js/zepto.js"></script>
+<script>
+  $(function(){
+    // var obj = {};
+    var num;
+    function fnNum(){
+      function saveNum(){
+        $.ajax({
+          type: 'post',
+          url: '../../port/login.php',
+          dataType: 'json',
+          data: {
+            name: 'mango',
+            password: '123456'
+          },
+          success: function(data) {
+            if (data.status == 'success') {
+              console.log(num);
+              num = data.name;
+            } else {
+              alert('账号或者密码错误！');
+            }
+          },
+          error: function(data) {
+            alert('您的网络有问题。');
+          },
+        })
+      }
+      saveNum();
+    }
+
+    fnNum();
+    $('.test').click(function(){
+      console.log(num);
+    })
+    
+
+    $.ajax({
+      type: 'post',
+      url: 'http://podevapp01.derucci.com:50100/RESTAdapter/demo/flight/Dynamicpoint?mode_set=expert',
+      dataType: 'json',
+      data: {
+        Agency: "110",
+        FlightDetails: {
+              "AirlineID": "GGGG",
+              "ConnID": "0400",
+              "Date": "2014-09-13"
+        }
+        // name: 'mango',
+        // password: '123456'
+      },
+      success: function(data) {
+        console.log(data);
+      },
+      error: function(data) {
+        alert('您的网络有问题。');
+      },
+    })
+
+  })
+</script>
+</body>
+</html>
