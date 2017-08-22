@@ -2,6 +2,7 @@
 文件loginJsonp.php为做过Jsonp跨域处理的接口（调用参考文件夹html下的jsonp.html文件）。
 文件loginCros.php为采用cros跨域处理的接口（调用参考html文件夹下的cros.html文件）。
 文件signIn.php用于注册，并把注册信息写入数据库。（signIn.html）
+文件getOpenId.php用于获取微信公众号openid。
 
 
 创建数据库命令：
