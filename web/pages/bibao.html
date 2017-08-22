@@ -10,64 +10,36 @@
 
 <script src="../js/zepto.js"></script>
 <script>
-  $(function(){
-    // var obj = {};
-    var num;
-    function fnNum(){
-      function saveNum(){
-        $.ajax({
-          type: 'post',
-          url: '../../port/login.php',
-          dataType: 'json',
-          data: {
-            name: 'mango',
-            password: '123456'
-          },
-          success: function(data) {
-            if (data.status == 'success') {
-              console.log(num);
-              num = data.name;
-            } else {
-              alert('账号或者密码错误！');
-            }
-          },
-          error: function(data) {
-            alert('您的网络有问题。');
-          },
-        })
-      }
-      saveNum();
+  (function () {
+    var a = 10;
+    var b = 20;
+ 
+    function add(num1, num2) {
+        var num1 = !!num1 ? num1 : a;
+        var num2 = !!num2 ? num2 : b;
+ 
+        return num1 + num2;
     }
+ 
+    window.add = add;
+})();
+ 
+console.log(add(0,20));
 
-    fnNum();
-    $('.test').click(function(){
-      console.log(num);
-    })
-    
-
-    $.ajax({
-      type: 'post',
-      url: 'http://podevapp01.derucci.com:50100/RESTAdapter/demo/flight/Dynamicpoint?mode_set=expert',
-      dataType: 'json',
-      data: {
-        Agency: "110",
-        FlightDetails: {
-              "AirlineID": "GGGG",
-              "ConnID": "0400",
-              "Date": "2014-09-13"
-        }
-        // name: 'mango',
-        // password: '123456'
-      },
-      success: function(data) {
-        console.log(data);
-      },
-      error: function(data) {
-        alert('您的网络有问题。');
-      },
-    })
-
-  })
+// 声明构造函数
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+ 
+// 通过prototye属性，将方法挂载到原型对象上
+Person.prototype.getName = function() {
+    return this.name;
+}
+ 
+var p1 = new Person('tim', 10);
+var p2 = new Person('jak', 22);
+console.log(p1.getName()); // true
 </script>
 </body>
 </html>
