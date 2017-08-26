@@ -3,6 +3,7 @@
 文件loginCros.php为采用cros跨域处理的接口（调用参考html文件夹下的cros.html文件）。
 文件signIn.php用于注册，并把注册信息写入数据库。（signIn.html）
 文件getOpenId.php用于获取微信公众号openid。
+文件phpPost.php添加php发起post请求的方法，且实现了微信客服发送图文消息的开发。
 
 
 创建数据库命令：

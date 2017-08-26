@@ -10,6 +10,7 @@
   curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);//这个是重点。
   $data = curl_exec($curl);
   curl_close($curl);
+
   //将stdClass Object转成array
   $json_obj = json_decode($data,true);
   //将array转成json数据

@@ -10,6 +10,7 @@ $(function() {
 })
 
 function getOpenId(code) {
+  console.log(code);
   $('.getOpenId').click(function() {
     $.ajax({
       type: 'post',

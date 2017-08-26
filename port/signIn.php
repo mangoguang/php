@@ -2,6 +2,7 @@
 //定义变量
 $name=$_POST["name"];
 $password=$_POST["password"];
+
 //登陆数据库
 $con = mysql_connect("localhost:3308","root","derucci123");
 //连接失败时报错

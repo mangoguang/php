@@ -20,4 +20,6 @@ if($name == $row[1]&&$password == $row[2]){
   $data = array("name"=>$name,'status'=>'error');
 }
 print_r(json_encode($data));
+
+// print_r($_POST['name']);
 ?> 
