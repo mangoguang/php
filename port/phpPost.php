@@ -42,7 +42,7 @@
 //         )
 //       ));
 
-$post_data = '{"touser": "oF0GEwsP7TJ5UCn9sRBpjsENhq2k","msgtype": "text","text": {"content": "Hello World"}}';
+// $post_data = '{"touser": "oF0GEwsP7TJ5UCn9sRBpjsENhq2k","msgtype": "text","text": {"content": "Hello World"}}';
 $post_data = '{
     "touser":"oF0GEwsP7TJ5UCn9sRBpjsENhq2k",
     "msgtype":"news",
@@ -51,20 +51,20 @@ $post_data = '{
          {
              "title":"Happy Day",
              "description":"Is Really A Happy Day",
-             "url":"http://derucci.net/t6/focus.html",
+             "url":"https://derucci.net/t6/focus.html",
              "picurl":"http://derucci.net/t6/9919.png"
          },
          {
              "title":"Happy Day",
              "description":"Is Really A Happy Day",
-             "url":"http://derucci.net/t6/focus.html",
+             "url":"https://derucci.net/t6/focus.html",
              "picurl":"http://derucci.net/t6/9919.png"
          }
          ]
     }
 }';
 
-$url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=mTdG0Gx-pYvKbTAZQMzn8xwYYBZ33j9rOKGs4wH_uCDTDDsbeSKRXUrRNxd7E0_UPodIWSytRLgLup6RyvhezhaczRCqIEROjQkR9NSAMfGYEdmTtj_KxxaKsq8yH0x1HATcAJAUNG";
+$url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=4awDbbkhmFPzFc1qyvBCWz3j86ItG-zIx6ctXW_wN-4EuozKQqDnaAlykF0flVAWYutRXfc5LNJmV328LNv8nUxumiCGjfP3NIiLd_fIGhL3YgX3YdZpojTp0x_emgVMKWXiAJAPBC";
 
 // $post_data = array(
 //       "name" => "mango",
